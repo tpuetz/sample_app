@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -34,6 +35,7 @@ group :test do
 	gem 'win32console', '1.3.0'
 	gem 'guard-spork', '0.3.2'
 	gem 'spork', '~> 0.9.0.rc'
+	gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do
@@ -41,7 +43,7 @@ group :production do
 end
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.0.1'
+
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
