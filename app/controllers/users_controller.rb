@@ -5,8 +5,6 @@ class UsersController < ApplicationController
   before_filter :signed_in_user, 
                 only: [:index, :edit, :update, :following, :followers]
 
-  scope :admin, where(admin: true)
-
   def index
     @users = User.paginate(:page => params[:page])
     @title = "All users"
