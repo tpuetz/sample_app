@@ -17,6 +17,11 @@ class MicropostsController < ApplicationController
     redirect_back_or root_path
   end
   
+  def self.from_users_followed_by(user)
+    followed_user_ids = user.followed_user_ids.join(', ')
+    where("user_id IN (#{followed_user_ids}) OR user_id = ?", user)
+  end
+  
   private
 
     def correct_user
